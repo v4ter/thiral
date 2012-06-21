@@ -1,6 +1,7 @@
 $(function(){
 	$(window).scrollTop(0);
 	var mode = 'scrolling';
+	$('.active').next().addClass('next');
 
 	$('a').on('click', function(e){
 		e.preventDefault();
@@ -21,7 +22,7 @@ $(function(){
 					$('body').scrollTo(section, 500, {
 						onAfter : function(){
 							$('.gallery-section').removeClass('active');
-							$(section).addClass('active');
+							$(section).addClass('active').next().addClass('next');
 							mode = 'scrolling';
 						}
 					});
@@ -31,7 +32,7 @@ $(function(){
 					onAfter : function(){
 						$(section).children('.gallery').fadeIn(800, function(){
 							$('.gallery-section').removeClass('active');
-							$(section).addClass('active open');
+							$(section).addClass('active open').next().addClass('next');
 							mode = 'scrolling';
 						});
 					}
@@ -41,7 +42,7 @@ $(function(){
 			$('body').scrollTo(section, 500, {
 				onAfter : function(){
 					$('.gallery-section').removeClass('active');
-					$(section).addClass('active');
+					$(section).addClass('active').next().addClass('next');
 					mode = 'scrolling';
 				}
 			});
@@ -57,13 +58,11 @@ $(function(){
 			if(winOffset > nextOffset){
 				var section = $('.active').next(),
 					id = '#' + section.attr('id');
-					newHeight = $(section).height() + $(section).children('.gallery').height() + $(section).children('h2').height();
-					console.log(newHeight);
 
 				$(section).fadeIn(300, function(){
 					$(this).children('.gallery').fadeIn(800);
 					$('.gallery-section').removeClass('active');
-					$(section).addClass('active open');
+					$(section).addClass('active open').next().addClass('next');
 
 					$('.nav a').removeClass('active');
 					$('.nav a[href=' + id + ']').addClass('active visited');

@@ -1,0 +1,16 @@
+.gallery{
+	display:none;
+	overflow:hidden;
+}
+
+.gallery-section.open .gallery{
+	display:block;
+}
+
+nav a.visited{
+	color:green;
+}
+
+nav a.active{
+	color:red;
+}

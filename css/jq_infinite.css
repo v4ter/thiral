@@ -3,6 +3,10 @@
 	overflow:hidden;
 }
 
+.gallery-section.title, .gallery-section.active, .gallery-section.open{
+	display:block;
+}
+
 .gallery-section.open .gallery{
 	display:block;
 }

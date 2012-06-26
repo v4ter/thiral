@@ -11,22 +11,23 @@
 </head>
 
 <script type="text/template" id="nav-link">
-	<li><a href="#link<%= i %>" <% if(active === true){ %>class="active visited"<%} %>>link<%= i %></a></li>
+	<li><a href="#<%= id %>"><%= title %></a></li>
 </script>
 
 <script type="text/template" id="gallery-section">
-	<section class="gallery-section <% if(active === true){ %>active open<%} %>" id="link<%= i %>">
-		<h2><a href="#link<%= i %>">Section header <%= i %></a></h2>
+	<section class="gallery-section" id="<%= id %>">
+		<h2><a href="#<%= id %>"><%= title %></a></h2>
 		<div class="gallery"></div>
 	</section>
 </script>
 
 <script type="text/template" id="gallery-item">
-	<figure class="photo"></figure>
+	<figure class="photo">
+		<img src="img/<%= srcThumb %>" alt="<%= srcThumb %>">
+	</figure>
 </script>
 
 <body>
-
 <div class="container" data-items="15" data-photos="20">
 	<section class="main">
 		

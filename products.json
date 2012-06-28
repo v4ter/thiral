@@ -1,271 +1,271 @@
 {
 	"series01" : {
 		"title" : "series 01",
-		"srcThumb" : "",
+		"srcThumb" : "img/samples/",
 		"products" : [
 			{
 				"title": "series 01 - product 01",
 				"desc" : "product 01 description",
-				"srcThumb" : "s01p01_thumb.jpg",
-				"srcLarge" : "s01p01_large.jpg"
+				"srcThumb" : "img/samples/s01p01_thumb.jpg",
+				"srcLarge" : "img/samples/s01p01_large.jpg"
 			},
 			{
 				"title": "series 01 - product 02",
 				"desc" : "product 02 description",
-				"srcThumb" : "s01p02_thumb.jpg",
-				"srcLarge" : "s01p02_large.jpg"
+				"srcThumb" : "img/samples/s01p02_thumb.jpg",
+				"srcLarge" : "img/samples/s01p02_large.jpg"
 			},
 			{
 				"title": "series 01 - product 03",
 				"desc" : "product 03 description",
-				"srcThumb" : "s01p03_thumb.jpg",
-				"srcLarge" : "s01p03_large.jpg"
+				"srcThumb" : "img/samples/s01p03_thumb.jpg",
+				"srcLarge" : "img/samples/s01p03_large.jpg"
 			},
 			{
 				"title": "series 01 - product 04",
 				"desc" : "product 04 description",
-				"srcThumb" : "s01p04_thumb.jpg",
-				"srcLarge" : "s01p04_large.jpg"
+				"srcThumb" : "img/samples/s01p04_thumb.jpg",
+				"srcLarge" : "img/samples/s01p04_large.jpg"
 			},
 			{
 				"title": "series 01 - product 05",
 				"desc" : "product 05 description",
-				"srcThumb" : "s01p05_thumb.jpg",
-				"srcLarge" : "s01p05_large.jpg"
+				"srcThumb" : "img/samples/s01p05_thumb.jpg",
+				"srcLarge" : "img/samples/s01p05_large.jpg"
 			},
 			{
 				"title": "series 01 - product 06",
 				"desc" : "product 06 description",
-				"srcThumb" : "s01p06_thumb.jpg",
-				"srcLarge" : "s01p06_large.jpg"
+				"srcThumb" : "img/samples/s01p06_thumb.jpg",
+				"srcLarge" : "img/samples/s01p06_large.jpg"
 			},
 			{
 				"title": "series 01 - product 07",
 				"desc" : "product 07 description",
-				"srcThumb" : "s01p07_thumb.jpg",
-				"srcLarge" : "s01p07_large.jpg"
+				"srcThumb" : "img/samples/s01p07_thumb.jpg",
+				"srcLarge" : "img/samples/s01p07_large.jpg"
 			},
 			{
 				"title": "series 01 - product 08",
 				"desc" : "product 08 description",
-				"srcThumb" : "s01p08_thumb.jpg",
-				"srcLarge" : "s01p08_large.jpg"
+				"srcThumb" : "img/samples/s01p08_thumb.jpg",
+				"srcLarge" : "img/samples/s01p08_large.jpg"
 			}
 		]
 	},
 	"series02" : {
 		"title" : "series 02",
-		"srcThumb" : "",
+		"srcThumb" : "img/samples/",
 		"products" : [
 			{
 				"title": "series 02 - product 01",
 				"desc" : "product 01 description",
-				"srcThumb" : "s02p01_thumb.jpg",
-				"srcLarge" : "s02p01_large.jpg"
+				"srcThumb" : "img/samples/s02p01_thumb.jpg",
+				"srcLarge" : "img/samples/s02p01_large.jpg"
 			},
 			{
 				"title": "series 02 - product 02",
 				"desc" : "product 02 description",
-				"srcThumb" : "s02p02_thumb.jpg",
-				"srcLarge" : "s02p02_large.jpg"
+				"srcThumb" : "img/samples/s02p02_thumb.jpg",
+				"srcLarge" : "img/samples/s02p02_large.jpg"
 			},
 			{
 				"title": "series 02 - product 03",
 				"desc" : "product 03 description",
-				"srcThumb" : "s02p03_thumb.jpg",
-				"srcLarge" : "s02p03_large.jpg"
+				"srcThumb" : "img/samples/s02p03_thumb.jpg",
+				"srcLarge" : "img/samples/s02p03_large.jpg"
 			},
 			{
 				"title": "series 02 - product 04",
 				"desc" : "product 04 description",
-				"srcThumb" : "s02p04_thumb.jpg",
-				"srcLarge" : "s02p04_large.jpg"
+				"srcThumb" : "img/samples/s02p04_thumb.jpg",
+				"srcLarge" : "img/samples/s02p04_large.jpg"
 			},
 			{
 				"title": "series 02 - product 05",
 				"desc" : "product 05 description",
-				"srcThumb" : "s02p05_thumb.jpg",
-				"srcLarge" : "s02p05_large.jpg"
+				"srcThumb" : "img/samples/s02p05_thumb.jpg",
+				"srcLarge" : "img/samples/s02p05_large.jpg"
 			},
 			{
 				"title": "series 02 - product 06",
 				"desc" : "product 06 description",
-				"srcThumb" : "s02p06_thumb.jpg",
-				"srcLarge" : "s02p06_large.jpg"
+				"srcThumb" : "img/samples/s02p06_thumb.jpg",
+				"srcLarge" : "img/samples/s02p06_large.jpg"
 			},
 			{
 				"title": "series 02 - product 07",
 				"desc" : "product 07 description",
-				"srcThumb" : "s02p07_thumb.jpg",
-				"srcLarge" : "s02p07_large.jpg"
+				"srcThumb" : "img/samples/s02p07_thumb.jpg",
+				"srcLarge" : "img/samples/s02p07_large.jpg"
 			},
 			{
 				"title": "series 02 - product 08",
 				"desc" : "product 08 description",
-				"srcThumb" : "s02p08_thumb.jpg",
-				"srcLarge" : "s02p08_large.jpg"
+				"srcThumb" : "img/samples/s02p08_thumb.jpg",
+				"srcLarge" : "img/samples/s02p08_large.jpg"
 			}
 		]
 	},
 	"series03" : {
 		"title" : "series 03",
-		"srcThumb" : "",
+		"srcThumb" : "img/samples/",
 		"products" : [
 			{
 				"title": "series 03 - product 01",
 				"desc" : "product 01 description",
-				"srcThumb" : "s03p01_thumb.jpg",
-				"srcLarge" : "s03p01_large.jpg"
+				"srcThumb" : "img/samples/s03p01_thumb.jpg",
+				"srcLarge" : "img/samples/s03p01_large.jpg"
 			},
 			{
 				"title": "series 03 - product 02",
 				"desc" : "product 02 description",
-				"srcThumb" : "s03p02_thumb.jpg",
-				"srcLarge" : "s03p02_large.jpg"
+				"srcThumb" : "img/samples/s03p02_thumb.jpg",
+				"srcLarge" : "img/samples/s03p02_large.jpg"
 			},
 			{
 				"title": "series 03 - product 03",
 				"desc" : "product 03 description",
-				"srcThumb" : "s03p03_thumb.jpg",
-				"srcLarge" : "s03p03_large.jpg"
+				"srcThumb" : "img/samples/s03p03_thumb.jpg",
+				"srcLarge" : "img/samples/s03p03_large.jpg"
 			},
 			{
 				"title": "series 03 - product 04",
 				"desc" : "product 04 description",
-				"srcThumb" : "s03p04_thumb.jpg",
-				"srcLarge" : "s03p04_large.jpg"
+				"srcThumb" : "img/samples/s03p04_thumb.jpg",
+				"srcLarge" : "img/samples/s03p04_large.jpg"
 			},
 			{
 				"title": "series 03 - product 05",
 				"desc" : "product 05 description",
-				"srcThumb" : "s03p05_thumb.jpg",
-				"srcLarge" : "s03p05_large.jpg"
+				"srcThumb" : "img/samples/s03p05_thumb.jpg",
+				"srcLarge" : "img/samples/s03p05_large.jpg"
 			},
 			{
 				"title": "series 03 - product 06",
 				"desc" : "product 06 description",
-				"srcThumb" : "s03p06_thumb.jpg",
-				"srcLarge" : "s03p06_large.jpg"
+				"srcThumb" : "img/samples/s03p06_thumb.jpg",
+				"srcLarge" : "img/samples/s03p06_large.jpg"
 			},
 			{
 				"title": "series 03 - product 07",
 				"desc" : "product 07 description",
-				"srcThumb" : "s03p07_thumb.jpg",
-				"srcLarge" : "s03p07_large.jpg"
+				"srcThumb" : "img/samples/s03p07_thumb.jpg",
+				"srcLarge" : "img/samples/s03p07_large.jpg"
 			},
 			{
 				"title": "series 03 - product 08",
 				"desc" : "product 08 description",
-				"srcThumb" : "s03p08_thumb.jpg",
-				"srcLarge" : "s03p08_large.jpg"
+				"srcThumb" : "img/samples/s03p08_thumb.jpg",
+				"srcLarge" : "img/samples/s03p08_large.jpg"
 			}
 		]
 	},
 	"series04" : {
 		"title" : "series 04",
-		"srcThumb" : "",
+		"srcThumb" : "img/samples/",
 		"products" : [
 			{
 				"title": "series 04 - product 01",
 				"desc" : "product 01 description",
-				"srcThumb" : "s04p01_thumb.jpg",
-				"srcLarge" : "s04p01_large.jpg"
+				"srcThumb" : "img/samples/s04p01_thumb.jpg",
+				"srcLarge" : "img/samples/s04p01_large.jpg"
 			},
 			{
 				"title": "series 04 - product 02",
 				"desc" : "product 02 description",
-				"srcThumb" : "s04p02_thumb.jpg",
-				"srcLarge" : "s04p02_large.jpg"
+				"srcThumb" : "img/samples/s04p02_thumb.jpg",
+				"srcLarge" : "img/samples/s04p02_large.jpg"
 			},
 			{
 				"title": "series 04 - product 03",
 				"desc" : "product 03 description",
-				"srcThumb" : "s04p03_thumb.jpg",
-				"srcLarge" : "s04p03_large.jpg"
+				"srcThumb" : "img/samples/s04p03_thumb.jpg",
+				"srcLarge" : "img/samples/s04p03_large.jpg"
 			},
 			{
 				"title": "series 04 - product 04",
 				"desc" : "product 04 description",
-				"srcThumb" : "s04p04_thumb.jpg",
-				"srcLarge" : "s04p04_large.jpg"
+				"srcThumb" : "img/samples/s04p04_thumb.jpg",
+				"srcLarge" : "img/samples/s04p04_large.jpg"
 			},
 			{
 				"title": "series 04 - product 05",
 				"desc" : "product 05 description",
-				"srcThumb" : "s04p05_thumb.jpg",
-				"srcLarge" : "s04p05_large.jpg"
+				"srcThumb" : "img/samples/s04p05_thumb.jpg",
+				"srcLarge" : "img/samples/s04p05_large.jpg"
 			},
 			{
 				"title": "series 04 - product 06",
 				"desc" : "product 06 description",
-				"srcThumb" : "s04p06_thumb.jpg",
-				"srcLarge" : "s04p06_large.jpg"
+				"srcThumb" : "img/samples/s04p06_thumb.jpg",
+				"srcLarge" : "img/samples/s04p06_large.jpg"
 			},
 			{
 				"title": "series 04 - product 07",
 				"desc" : "product 07 description",
-				"srcThumb" : "s04p07_thumb.jpg",
-				"srcLarge" : "s04p07_large.jpg"
+				"srcThumb" : "img/samples/s04p07_thumb.jpg",
+				"srcLarge" : "img/samples/s04p07_large.jpg"
 			},
 			{
 				"title": "series 04 - product 08",
 				"desc" : "product 08 description",
-				"srcThumb" : "s04p08_thumb.jpg",
-				"srcLarge" : "s04p08_large.jpg"
+				"srcThumb" : "img/samples/s04p08_thumb.jpg",
+				"srcLarge" : "img/samples/s04p08_large.jpg"
 			}
 		]
 	},
 	"series05" : {
 		"title" : "series 05",
-		"srcThumb" : "",
+		"srcThumb" : "img/samples/",
 		"products" : [
 			{
 				"title": "series 05 - product 01",
 				"desc" : "product 01 description",
-				"srcThumb" : "s05p01_thumb.jpg",
-				"srcLarge" : "s05p01_large.jpg"
+				"srcThumb" : "img/samples/s05p01_thumb.jpg",
+				"srcLarge" : "img/samples/s05p01_large.jpg"
 			},
 			{
 				"title": "series 05 - product 02",
 				"desc" : "product 02 description",
-				"srcThumb" : "s05p02_thumb.jpg",
-				"srcLarge" : "s05p02_large.jpg"
+				"srcThumb" : "img/samples/s05p02_thumb.jpg",
+				"srcLarge" : "img/samples/s05p02_large.jpg"
 			},
 			{
 				"title": "series 05 - product 03",
 				"desc" : "product 03 description",
-				"srcThumb" : "s05p03_thumb.jpg",
-				"srcLarge" : "s05p03_large.jpg"
+				"srcThumb" : "img/samples/s05p03_thumb.jpg",
+				"srcLarge" : "img/samples/s05p03_large.jpg"
 			},
 			{
 				"title": "series 05 - product 04",
 				"desc" : "product 04 description",
-				"srcThumb" : "s05p04_thumb.jpg",
-				"srcLarge" : "s05p04_large.jpg"
+				"srcThumb" : "img/samples/s05p04_thumb.jpg",
+				"srcLarge" : "img/samples/s05p04_large.jpg"
 			},
 			{
 				"title": "series 05 - product 05",
 				"desc" : "product 05 description",
-				"srcThumb" : "s05p05_thumb.jpg",
-				"srcLarge" : "s05p05_large.jpg"
+				"srcThumb" : "img/samples/s05p05_thumb.jpg",
+				"srcLarge" : "img/samples/s05p05_large.jpg"
 			},
 			{
 				"title": "series 05 - product 06",
 				"desc" : "product 06 description",
-				"srcThumb" : "s05p06_thumb.jpg",
-				"srcLarge" : "s05p06_large.jpg"
+				"srcThumb" : "img/samples/s05p06_thumb.jpg",
+				"srcLarge" : "img/samples/s05p06_large.jpg"
 			},
 			{
 				"title": "series 05 - product 07",
 				"desc" : "product 07 description",
-				"srcThumb" : "s05p07_thumb.jpg",
-				"srcLarge" : "s05p07_large.jpg"
+				"srcThumb" : "img/samples/s05p07_thumb.jpg",
+				"srcLarge" : "img/samples/s05p07_large.jpg"
 			},
 			{
 				"title": "series 05 - product 08",
 				"desc" : "product 08 description",
-				"srcThumb" : "s05p08_thumb.jpg",
-				"srcLarge" : "s05p08_large.jpg"
+				"srcThumb" : "img/samples/s05p08_thumb.jpg",
+				"srcLarge" : "img/samples/s05p08_large.jpg"
 			}
 		]
 	}

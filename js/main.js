@@ -12,33 +12,45 @@ $(function(){
 			galleryItemTemplate = _.template($('#gallery-item').html()),
 			navDom = $('.nav ul'),
 			mainDom = $('.main');
-			obj = data;
+			obj = data,
+			navTemp = '',
+			mainTemp = '';
 
 		templating(obj);
 
 		function templating(obj){
 			_.each(obj, function(properties, seriesId){
-				navDom.append(navLinkTemplate({
+				navTemp += navLinkTemplate({
 					'title' : properties.title,
 					'id' : seriesId
-				}));
+				});
 
-				mainDom.append(gallerySectionTemplate({
+				mainTemp += gallerySectionTemplate({
 					'title' : properties.title,
 					'id' : seriesId
-				}));
+				});
 			});
+
+			navDom.append(navTemp);
+			mainDom.append(mainTemp);
 		}
 
 		function loadImages(sectionDom, callback){
 			var	id = sectionDom.attr('id'),
-				gallery = sectionDom.children('.gallery');
+				gallery = sectionDom.children('.gallery'),
+				tempGallery = '';
+
+			gallery.html('<div class="loader"><img src="img/ajax-loader.gif" alt="ajax loader"></div>');
 
 			_.each(obj[id]['products'], function(product){
-				gallery.append(galleryItemTemplate({
+				tempGallery += galleryItemTemplate({
 					'srcThumb' : product.srcThumb
-				}));
+				});
 			});
+
+			gallery.html(tempGallery);
+
+			tempGallery = '';
 
 			if(callback) callback();
 		}

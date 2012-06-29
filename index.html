@@ -16,14 +16,14 @@
 
 <script type="text/template" id="gallery-section">
 	<section class="gallery-section" id="<%= id %>">
-		<h2><a href="#<%= id %>"><%= title %></a></h2>
+		<h2><%= title %></h2>
 		<div class="gallery"></div>
 	</section>
 </script>
 
 <script type="text/template" id="gallery-item">
 	<figure class="photo">
-		<img src="<%= srcThumb %>" alt="<%= srcThumb %>">
+		<img src="img/gray.png" data-original="<%= thumbSrc %>" alt="<%= thumbSrc %>" width="<%= thumbWidth %>" height="<%= thumbHeight %>">
 	</figure>
 </script>
 
@@ -39,7 +39,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
 <script src="js/vendor/jquery.scrollTo-1.4.2-min.js"></script>
-<script src="js/templating.js"></script>
+<script src="js/jquery.specialscroll.js"></script>
+<script src="js/lazy.js"></script>
 <script src="js/main.js"></script>
 
 </body>

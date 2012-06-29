@@ -13,140 +13,39 @@ $(function(){
 			navDom = $('.nav ul'),
 			mainDom = $('.main');
 			obj = data,
-			navTemp = '',
-			mainTemp = '';
-
-		templating(obj);
+			curSectionGallery = '',
+			stickyTop = '',
+			elements = '';
 
 		function templating(obj){
 			_.each(obj, function(properties, seriesId){
-				navTemp += navLinkTemplate({
+				navDom.append(navLinkTemplate({
 					'title' : properties.title,
 					'id' : seriesId
-				});
+				}));
 
-				mainTemp += gallerySectionTemplate({
+				mainDom.append(gallerySectionTemplate({
 					'title' : properties.title,
 					'id' : seriesId
-				});
-			});
+				}));
 
-			navDom.append(navTemp);
-			mainDom.append(mainTemp);
+				curSectionGallery = mainDom.children('.gallery-section').last().children('.gallery');
+
+				_.each(obj[seriesId]['products'], function(product){
+					curSectionGallery.append(galleryItemTemplate({
+						'thumbSrc' : product.thumbSrc,
+						'thumbWidth' : product.thumbWidth,
+						'thumbHeight' : product.thumbHeight
+					}));
+				});
+
+			});
 		}
 
-		function loadImages(sectionDom, callback){
-			var	id = sectionDom.attr('id'),
-				gallery = sectionDom.children('.gallery'),
-				tempGallery = '';
-
-			gallery.html('<div class="loader"><img src="img/ajax-loader.gif" alt="ajax loader"></div>');
-
-			_.each(obj[id]['products'], function(product){
-				tempGallery += galleryItemTemplate({
-					'srcThumb' : product.srcThumb
-				});
-			});
-
-			gallery.html(tempGallery);
-
-			tempGallery = '';
-
-			if(callback) callback();
-		}
-			
-
-		//on click
-		$('a').on('click', function(e){
-			e.preventDefault();
-			mode = 'anchoring';
-
-			var id = $(this).attr('href'),
-				sectionDom = $(id);
-			$('.nav a').removeClass('active');
-			$('nav a[href=' + id + ']').addClass('active visited');
-
-			if(!sectionDom.hasClass('open')){
-				var curIndex = $('.gallery-section').index($('.active')),
-					newIndex = $('.gallery-section').index(sectionDom);
-
-				if(curIndex < newIndex){
-					for(var i = curIndex; i <= newIndex; i++){
-						$('.gallery-section').eq(i).addClass('title');
-					}
-
-					var callback = function(){
-						sectionDom.children('.gallery').fadeIn(250, function(){
-							$('body').scrollTo(id, 500, {
-								onAfter : function(){
-									
-
-									
-										$('.gallery-section').removeClass('active');
-										sectionDom.addClass('open active').next().addClass('title');
-										mode = 'scrolling';
-								}
-							});
-						});
-					};
-
-					loadImages(sectionDom, callback);
-				} else {
-					$('body').scrollTo(id, 500, {
-						onAfter : function(){
-							loadImages(sectionDom, callback);
-
-							function callback(){
-								sectionDom.children('.gallery').fadeIn(800, function(){
-									sectionDom.addClass('open').next().addClass('title');
-									mode = 'scrolling';
-								});
-							}
-						}
-					});
-				}
-			} else {
-				$('body').scrollTo(id, 500, {
-					onAfter : function(){
-						$('.gallery-section').removeClass('active');
-						sectionDom.addClass('active').next().addClass('title');
-						mode = 'scrolling';
-					}
-				});
-			}
-			
-		});
-		
-		//on scroll
 		$(window).on('scroll', function(){
+			//sticky sidebar
 			var windowTop = $(this).scrollTop();
 
-			if(mode === 'scrolling' && $('.active').next().length !== 0){
-				var	nextOffset = $('.active').next().offset().top - $(window).height() + 80;
-
-				if(windowTop > nextOffset){
-					var sectionDom = $('.active').next(),
-						id = '#' + sectionDom.attr('id');
-
-					var callback = function(){
-						$('.gallery-section').removeClass('active');
-						sectionDom.addClass('active open').next().addClass('title');
-
-						$('.nav a').removeClass('active');
-						$('.nav a[href=' + id + ']').addClass('active visited');
-					};
-
-					if(!$('.active').next().hasClass('open')){
-						sectionDom.children('.gallery').fadeIn(800, function(){
-							loadImages(sectionDom, callback);
-						});
-					} else {
-						callback();
-					}
-				}
-			}
-
-			//sticky sidebar
 			if (stickyTop < windowTop) {
 				$('.sticky').css({ position: 'fixed', top: 10 });
 			}
@@ -155,42 +54,27 @@ $(function(){
 			}
 		});
 
-		//initial.setup
-		$('.nav a').first().addClass('active visited');
-		$('.gallery-section').first().addClass('active open');
-		$('.gallery-section.active').next().addClass('title open');
+		function bindNavlinks(){
+			$('nav a').on('click', function(e){
+				e.preventDefault();
 
-		var totalHeight = 0;
-		
-		loadImages($('.gallery-section.active'));
+				var id = $(this).attr('href'),
+					sectionDom = $(id);
 
-		loadImages($('.gallery-section.open').last());
+				$('body').scrollTo(sectionDom, 500);
+			});
+		}
 
-
-		// function checkHeight(h){
-		// 	if(h < $(window).height()){
-		// 		var nextGallery = $('.gallery-section').not('.open').first();
-
-		// 		console.log(nextGallery);
-
-		// 		nextGallery.addClass('open');
-
-		// 		loadImages(nextGallery, function(){
-		// 			console.log(totalHeight);
-		// 			totalHeight += $('.gallery-section.open').last().height();
-		// 			checkHeight(totalHeight);
-		// 		});
-				
-		// 	}
-		// }
+		(function init(){
+			templating(obj);
+			stickyTop = $('.sticky').offset().top;
+			$('img').lazyload({
+				'event' : 'scrollstop'
+			});
+			bindNavlinks();
+			$(window).scrollTo(0);
+		}());
 
 		
-
-		var	stickyTop = $('.sticky').offset().top, mode;
-		$(window).scrollTo(0, 0, {
-			onAfter : function(){
-				mode = 'scrolling';
-			}
-		});
 	}
 });

@@ -3,32 +3,15 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>infinite custom plugin</title>
+	<title>thiral lazyload</title>
 
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<link rel="stylesheet" href="css/jq_infinite.css">
+	<link rel="stylesheet" href="css/thiral.lazyload.css">
 </head>
 
-<script type="text/template" id="nav-link">
-	<li><a href="#<%= id %>"><%= title %></a></li>
-</script>
-
-<script type="text/template" id="gallery-section">
-	<section class="gallery-section" id="<%= id %>">
-		<h2><%= title %></h2>
-		<div class="gallery"></div>
-	</section>
-</script>
-
-<script type="text/template" id="gallery-item">
-	<figure class="photo">
-		<img src="img/gray.png" data-original="<%= thumbSrc %>" alt="<%= thumbSrc %>" width="<%= thumbWidth %>" height="<%= thumbHeight %>">
-	</figure>
-</script>
-
 <body>
-<div class="container" data-items="15" data-photos="20">
+<div class="container">
 	<section class="main"></section>
 	
 	<nav class="nav sticky">
@@ -36,13 +19,6 @@
 	</nav>
 </div>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.3/underscore-min.js"></script>
-<script src="js/vendor/jquery.scrollTo-1.4.2-min.js"></script>
-<script src="js/jquery.specialscroll.js"></script>
-<script src="js/lazy.js"></script>
-<script src="js/main.js"></script>
-
+<script src="js/vendor/require.js" data-main="js/main"></script>
 </body>
-
 </html>

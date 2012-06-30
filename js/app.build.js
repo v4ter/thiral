@@ -1,4 +1,7 @@
-requirejs.config({
+({
+	'appDir' : '../',
+	'baseUrl' : 'js',
+	'dir' : '../../thiral-build',
 	paths: {
 		'jquery' : 'vendor/jquery',
 		'underscore' : 'vendor/underscore',
@@ -7,13 +10,11 @@ requirejs.config({
 		'scrollTo' : 'vendor/jquery.scrollTo-1.4.2-min',
 		'templates' : 'templates'
 	},
-
-	shim : {
-		'underscore' : {exports : '_'},
-		'lazyload' : ['jquery'],
-		'specialscroll' : ['jquery'],
-		'scrollTo' : ['jquery']
-	}
-});
-
-requirejs(['underscore', 'thiral.lazyload']);
+	'modules' : [
+		{
+			'name' : 'main'
+		}
+	],
+	fileExclusionRegExp: /^\.|\.md\b/,
+	removeCombined : true
+})

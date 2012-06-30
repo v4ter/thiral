@@ -1,0 +1,15 @@
+.gallery{
+	overflow:hidden;
+}
+
+.nav a{
+	color:blue;
+}
+
+.nav a.visited{
+	color:green;
+}
+
+.nav a.active{
+	color:red;
+}

@@ -5,7 +5,7 @@ requirejs.config({
 		'lazyload' : 'vendor/jquery.lazyload',
 		'specialscroll' : 'vendor/jquery.specialscroll',
 		'scrollTo' : 'vendor/jquery.scrollTo-1.4.2-min',
-		'templates' : 'templates'
+		'templates' : '../templates/'
 	},
 
 	shim : {
@@ -16,4 +16,17 @@ requirejs.config({
 	}
 });
 
-requirejs(['underscore', 'thiral.lazyload']);
+requirejs(['underscore', 'thiral.lazyload'], function(){
+
+	$.ajax({
+		url : 'products',
+		dataType : 'json',
+		success : function(data){
+			$('.main').thiralLazyLoad({
+				'nav' : $('.nav'),
+				'data' : data
+			});
+		}
+	});
+	
+});

@@ -1,7 +1,3 @@
-.gallery{
-	overflow:hidden;
-}
-
 .nav a{
 	color:blue;
 }
@@ -12,4 +8,32 @@
 
 .nav a.active{
 	color:red;
+}
+
+.gallery-section{
+	overflow:hidden;
+}
+
+.gallery-section{
+	padding-top:30px;
+	border-top:1px solid #cecece;
+}
+
+.gallery-section:first-child{
+	padding-top:0;
+	border-top:none;
+}
+
+.gallery{
+	overflow:hidden;
+}
+
+.photo{
+	margin-left:40px;
+	margin-bottom:30px;
+	float:left;
+}
+
+.photo:nth-child(4n+1){
+	margin-left:0;
 }

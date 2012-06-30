@@ -1,27 +1,20 @@
 define([
 	'jquery',
-	'text!templates/nav_link.html',
+	'text!templates/nav_li.html',
 	'text!templates/gallery_section.html',
 	'text!templates/gallery_item.html',
 	'lazyload',
 	'specialscroll',
 	'scrollTo'
-], function($, navLink, gallerySection, galleryItem){
-	$.ajax({
-		url : 'products',
-		dataType : 'json',
-		success : function(data){
-			app(data);
-		}
-	});
-	
-	function app(data){
-		var navLinkTemplate = _.template(navLink),
+], function($, navLi, gallerySection, galleryItem){
+	$.fn.thiralLazyLoad = function(options){
+		var wrapperDom = this,
+			navDom = options.nav || $('nav').first(),
+			data = options.data,
+			jsonObj = options.jsonObj,
+			navLinkTemplate = _.template(navLi),
 			gallerySectionTemplate = _.template(gallerySection),
 			galleryItemTemplate = _.template(galleryItem),
-			navDom = $('.nav'),
-			mainDom = $('.main');
-			obj = data,
 			stickyTop = 0,
 			mode = 'scrolling',
 			measures = {};
@@ -30,19 +23,22 @@ define([
 			_.each(obj, function(properties, seriesId){
 				navDom.append(navLinkTemplate({
 					'title' : properties.title,
-					'id' : seriesId
+					'id' : seriesId,
+					'navThumb' : properties.navSrc
 				}));
 
-				mainDom.append(gallerySectionTemplate({
+				wrapperDom.append(gallerySectionTemplate({
 					'title' : properties.title,
 					'id' : seriesId
 				}));
 
-				var curSectionGallery = mainDom.children('.gallery-section').last().children('.gallery');
+				var curSectionGallery = wrapperDom.children('.gallery-section').last().children('.gallery');
 
 				_.each(obj[seriesId]['products'], function(product){
 					curSectionGallery.append(galleryItemTemplate({
 						'thumbSrc' : product.thumbSrc,
+						'largeSrc' : product.largeSrc,
+						'desc' : product.desc,
 						'thumbWidth' : product.thumbWidth,
 						'thumbHeight' : product.thumbHeight
 					}));
@@ -109,7 +105,7 @@ define([
 		}
 
 		(function init(){
-			templating(obj);
+			templating(data);
 			stickyTop = $('.sticky').offset().top;
 			$('img').lazyload({
 				'event' : 'scrollstop',
@@ -121,8 +117,6 @@ define([
 			getSectionsMeasures();
 			$(window).scrollTo(0);
 		}());
-
-		
-	}
+	};
 });
 

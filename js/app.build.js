@@ -15,6 +15,6 @@
 			'name' : 'main'
 		}
 	],
-	fileExclusionRegExp: /^\.|\.md\b|\.bat\b/,
+	fileExclusionRegExp: /^\.|\.md\b|\.bat\b|_optimize/,
 	removeCombined : true
 })

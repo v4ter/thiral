@@ -110,7 +110,7 @@ define([
 			$('img').lazyload({
 				'event' : 'scrollstop',
 				'effect' : 'fadeIn',
-				'effect_speed' : 250
+				'effect_speed' : 150
 			});
 			bindNavlinks();
 			navDom.find('a').first().addClass('active visited');

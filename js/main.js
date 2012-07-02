@@ -5,7 +5,7 @@ requirejs.config({
 		'lazyload' : 'vendor/jquery.lazyload',
 		'specialscroll' : 'vendor/jquery.specialscroll',
 		'scrollTo' : 'vendor/jquery.scrollTo-1.4.2-min',
-		'templates' : '../templates/'
+		'templates' : '../templates'
 	},
 
 	shim : {
@@ -19,7 +19,7 @@ requirejs.config({
 requirejs(['underscore', 'thiral.lazyload'], function(){
 
 	$.ajax({
-		url : 'products',
+		url : 'products.json.txt',
 		dataType : 'json',
 		success : function(data){
 			$('.main').thiralLazyLoad({
